@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Web-student management</title>
+	<link rel="stylesheet" href="../page/css/page.css">
+	<link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+	<!-- 头部 -->
+	<header>
+		<div class="logo">
+			<img src="../images/logo.png" alt="">
+			<span>D</span><span>E</span><span>V</span><span>E</span>
+		</div>
+
+		<div class="btn">
+			<span></span><span></span><span></span>
+		</div>
+
+		<div class="drop-list">
+			<ul>
+				<li class="list-item student-list" data-id="student-list">student list</li>
+				<li class="list-item student-add" data-id="student-add">add student</li>
+				<li class="list-item student-echarts" data-id="student-echarts">category</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- 左边菜单 -->
+	<div id="menu">
+		<h2 class="title">management</h2>
+		<ul class="list-group">
+			<li class="active student-list">student list</li>
+			<li class="student-add">add student</li>
+			<li class="student-echarts">category</li>
+		</ul>
+	</div>
+
+	<!-- right content -->
+	<div id="content">
+		<div class="active">
+			<!-- search box -->
+			<div class="searchBox">
+				<select name="">
+					<option value="id">sNo</option>
+					<option value="name">name</option>
+					<option value="sex">sex</option>
+				</select>
+				<input type="text" placeholder="please enter the content ">
+				<button class="btnBg1" id="searchBtn">search</button>
+				<button class="btnBg2" id="backBtn">back</button>
+			</div>
+
+			<!-- add button -->
+			<div class="addBtn">
+				<button class="btnBg1" id="randomAdd">random add</button>
+				<button class="btnBg2" id="customAdd">custom add</button>
+			</div>
+
+			<!-- student data shown -->
+			<div class="studentTable">
+				<table>
+
+				</table>
+			</div>
+
+			<!-- turn page -->
+			<div id="page"></div>
+		</div>
+
+		<div>
+			<!-- add student -->
+			<form id="addForm">
+				<div>
+					<label for="name">name</label>
+					<input type="text" id="name" name="name" placeholder="please enter student name">
+					<span id="validateName" class="regValidate"></span>
+				</div>
+				<div>
+					<label for="sex">sex</label>
+					<span>
+						male<input type="radio" name="sex" value="male" id="male" checked="">
+					</span>
+					<span>
+						female<input type="radio" name="sex" value="female" id="female">
+					</span>
+				</div>
+				<div>
+					<label for="email">email</label>
+					<input type="text" id="email" name="email" placeholder="please enter your email">
+					<span id="validateEmail" class="regValidate"></span>
+				</div>
+				<div>
+					<label for="age">age</label>
+					<input type="text" id="age" name="age" placeholder="please enter your age">
+					<span id="validateAge" class="regValidate"></span>
+				</div>
+				<div>
+					<label for="tel">tel</label>
+					<input type="text" id="tel" name="tel" placeholder="please enter your tel">
+					<span id="validateTel" class="regValidate"></span>
+				</div>
+				<div>
+					<label for="address">address</label>
+					<input type="text" id="address" name="add" placeholder="please enter your address">
+					<span id="validateAddress" class="regValidate"></span>
+				</div>
+				<div>
+					<button class="submitBtn btnBg1" type="button">submit</button>
+					<button class="returnBtn btnBg2" type="button">back</button>
+				</div>
+			</form>
+		</div>
+		<div class="tab-content-item echarts" id="student-echarts">
+			<div class="areaChart"></div>
+			<div class="sexChart"></div>
+		</div>
+	</div>
+
+	<script src="../js/jquery-3.3.1.js"></script>
+	<script src="../js/mock.js"></script>
+	<script src="../page/js/page.js"></script>
+	<script src="../api/api.js"></script>
+	<script src="../js/index.js"></script>
+	<script src="../js/echarts.js"></script>
+	<script src="../js/pie.js"></script>
+</body>
+
+</html>
